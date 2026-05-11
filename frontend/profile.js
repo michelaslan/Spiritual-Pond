@@ -31,7 +31,7 @@ const renderProfile = async () => {
 
 const showReadlist = (books) => {
     const container = document.querySelector("#readlist-container");
-    container.innerHTML = books.length === 0 ? "<p>Din läslista är tom.</p>" : "";
+    container.innerHTML = books.length === 0 ? "<p>Your reading list is empty.</p>" : "";
 
     books.forEach(book => {
         container.innerHTML += `
@@ -57,7 +57,7 @@ async function deleteBook(e, bookDocumentId) {
 
 const showRated = (entries) => {
     const container = document.querySelector("#rated-container");
-    container.innerHTML = entries.length === 0 ? "<p>Du har inte betygsatt några böcker än.</p>" : "";
+    container.innerHTML = entries.length === 0 ? "<p>You haven't rated any books yet.</p>" : "";
     entries.forEach(entry => {
         const book = entry.book;
         if (!book) return;

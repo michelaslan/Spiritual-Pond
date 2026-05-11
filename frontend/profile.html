@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min profil</title>
+    <title>My Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="profile.js" defer></script>
     <link rel="stylesheet" href="style.css">
@@ -17,26 +17,26 @@
     </aside>
 
     <main id="profile-main">
-        <h1>Min profil</h1>
+        <h1>My Profile</h1>
         <div id="profile-columns">
 
             <section class="profile-section">
-                <h2>Att läsa</h2>
+                <h2>Reading List</h2>
                 <div class="filter">
-                    <span>Sortera:</span>
-                    <button id="read-titleFilter">Titel (A-Ö)</button>
-                    <button id="read-authorFilter">Författare (A-Ö)</button>
+                    <span>Sort by:</span>
+                    <button id="read-titleFilter">Title (A-Z)</button>
+                    <button id="read-authorFilter">Author (A-Z)</button>
                 </div>
                 <div id="readlist-container"></div>
             </section>
 
             <section class="profile-section">
-                <h2>Betygsatta böcker</h2>
+                <h2>Rated Books</h2>
                 <div class="filter">
-                    <span>Sortera:</span>
-                    <button id="rate-titleFilter">Titel (A-Ö)</button>
-                    <button id="rate-authorFilter">Författare (A-Ö)</button>
-                    <button id="rate-ratingFilter">Betyg (högt→lågt)</button>
+                    <span>Sort by:</span>
+                    <button id="rate-titleFilter">Title (A-Z)</button>
+                    <button id="rate-authorFilter">Author (A-Z)</button>
+                    <button id="rate-ratingFilter">Rating (high→low)</button>
                 </div>
                 <div id="rated-container"></div>
             </section>
