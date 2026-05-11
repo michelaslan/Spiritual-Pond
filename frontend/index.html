@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <script src="registration.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/pond.png" id="header-logo"/>
+        <div id="header-right">
+            <a href="admin.html"><p id="admin-addBook">+</p></a>
+            <div id="btn-group">
+                <button id="registerBtn">Register</button>
+                <button id="loginBtn">Login</button>
+            </div>
+            <a href="profile.html"><img id="profileDuck" src="images/profile.png" alt="Profile" height="100"/></a>
+        </div>
+    </header>
+
+    <div id="registerFrame">
+        <button id="closeRegisterBtn">x</button>
+        <input type="text" id="reg-username" placeholder="Username">
+        <input type="text" id="reg-email" placeholder="Email">
+        <input type="password" id="reg-password" placeholder="Password">
+        <button id="register">Register</button>
+    </div>
+
+    <div id="loginFrame">
+        <button id="closeLoginBtn">x</button>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login">Login</button>
+    </div>
+
+    <h2 id="all-books-title">All Books</h2>
+
+    <ul id="book-list"></ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="admin.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" id="backArrow">←</a>
+
+    <div id="admin-form-container">
+        <h1>Add a Book</h1>
+        <div id="admin-form">
+            <input id="addBook-title" type="text" placeholder="Title">
+            <input id="addBook-author" type="text" placeholder="Author">
+            <input id="addBook-pages" type="number" placeholder="Pages">
+            <input id="addBook-release" type="date">
+            <input id="addBook-image" type="file">
+            <button id="createBookBtn" onclick="createBook()">Create book</button>
+            <input id="addBook-text" type="text" placeholder="Text">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Title",
+      "maxLength": 40,
+      "required": true
+    },
+    "Author": {
+      "type": "string",
+      "default": "Author",
+      "maxLength": 40,
+      "required": true
+    },
+    "Pages": {
+      "type": "integer",
+      "required": true,
+      "max": 20000
+    },
+    "Release": {
+      "type": "date",
+      "required": true
+    },
+    "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "readlists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::readlist.readlist"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}

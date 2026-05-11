@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min profil</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="profile.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" id="backArrow">←</a>
+    <aside id="aside">
+        <img id="profile-img" src="images/profile.png" alt="Profile" height="60"/>
+        <p id="profile-username"></p>
+        <button id="logout-btn">Logout</button>
+    </aside>
+
+    <main id="profile-main">
+        <h1>Min profil</h1>
+        <div id="profile-columns">
+
+            <section class="profile-section">
+                <h2>Att läsa</h2>
+                <div class="filter">
+                    <span>Sortera:</span>
+                    <button id="read-titleFilter">Titel (A-Ö)</button>
+                    <button id="read-authorFilter">Författare (A-Ö)</button>
+                </div>
+                <div id="readlist-container"></div>
+            </section>
+
+            <section class="profile-section">
+                <h2>Betygsatta böcker</h2>
+                <div class="filter">
+                    <span>Sortera:</span>
+                    <button id="rate-titleFilter">Titel (A-Ö)</button>
+                    <button id="rate-authorFilter">Författare (A-Ö)</button>
+                    <button id="rate-ratingFilter">Betyg (högt→lågt)</button>
+                </div>
+                <div id="rated-container"></div>
+            </section>
+
+        </div>
+    </main>
+</body>
+</html>
