@@ -14,6 +14,7 @@ document.querySelector("#register").addEventListener("click", async () => {
         localStorage.setItem("token", response.data.jwt);
         alert("Registration successful!");
         whileLoggedIn();
+        adminPanel();
     } catch (error) {
         alert("Registration failed: " + error.response.data.error.message);
     }
@@ -33,11 +34,23 @@ document.querySelector("#login").addEventListener("click", async () => {
         localStorage.setItem("token", response.data.jwt);
         alert("Login successful!");
         whileLoggedIn();
+        adminPanel();
     } catch (error) {
         alert("Login failed: " + error.response.data.error.message);
     }
 });
 
+async function adminPanel(){
+const BASE_URL = "http://localhost:1337";
+const token = localStorage.getItem("token");
+const authHeader = { headers: { Authorization: `Bearer ${token}` } };
+
+    const user = await axios.get(`${BASE_URL}/api/users/me`, authHeader);
+    if (user.data.Admin === true) {
+        const adminAddBookBtn = document.querySelector("#admin-addBook");
+        adminAddBookBtn.style.display = "flex";
+    }
+}
 
 function whileLoggedIn () {
     const registerBtn = document.querySelector("#registerBtn");
@@ -60,3 +73,4 @@ function whileLoggedIn () {
     
 }
 whileLoggedIn();
+adminPanel();

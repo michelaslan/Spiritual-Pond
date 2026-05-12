@@ -77,14 +77,6 @@ function buttonRendering (){
     closeLoginBtn.addEventListener("click", closeLoginFrame);
 }
 
-async function adminPanel(){
-    const user = await axios.get(`${BASE_URL}/api/users/me`, authHeader);
-    if (user.data.Admin === true) {
-        const adminAddBookBtn = document.querySelector("#admin-addBook");
-        adminAddBookBtn.style.display = "flex";
-    }
-}
-
 async function Theme(){
     const theme = await axios.get(`${BASE_URL}/api/theme`);
     const res = theme.data.data?.Color;
@@ -97,5 +89,4 @@ async function Theme(){
 
 buttonRendering();
 renderPage();
-adminPanel()
 Theme();
