@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git -C \"c:\\\\FEND25\\\\tetststs\\\\Spiritual-Pond\" add backend/.gitignore backend/public/uploads/ frontend/profile.html frontend/profile.js)",
+      "PowerShell(git -C \"c:\\\\FEND25\\\\tetststs\\\\Spiritual-Pond\" status)"
+    ]
+  }
+}
